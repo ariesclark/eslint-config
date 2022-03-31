@@ -32,6 +32,6 @@ jobs:
 
       - name: build package
         run: pnpm build
-        
+
       - name: publish package
-        run: pnpm publish --no-git-checks
+        run: pnpm publish --no-git-checks --access public
