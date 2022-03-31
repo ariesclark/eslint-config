@@ -1,5 +1,6 @@
 {
   "name": "@ariesclark/eslint-config",
+  "private": false,
   "version": "1.0.0",
   "description": "🚀🎨 An opinionated (and clearly the best) eslint configuration",
   "keywords": [
