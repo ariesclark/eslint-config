@@ -47,6 +47,7 @@ module.exports = {
 
         // Stylistic choices
         semi: ["warn", "always"],
+        "object-curly-spacing": ["warn", "always"],
         indent: ["warn", "tab"],
         // this rule is broken.
         // see: https://github.com/typescript-eslint/typescript-eslint/issues/1824
