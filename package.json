@@ -1,7 +1,7 @@
 {
   "name": "@ariesclark/eslint-config",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "🚀🎨 An opinionated (and clearly the best) eslint configuration",
   "keywords": [
     "eslint",
@@ -14,7 +14,7 @@
   },
   "author": "ariesclark",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "@rushstack/eslint-patch": "^1.1.1",
     "@typescript-eslint/eslint-plugin": "^5.17.0",
     "@typescript-eslint/parser": "^5.17.0",
