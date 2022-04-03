@@ -17,6 +17,7 @@ module.exports = {
         project: ["./tsconfig.json"]
     },
     rules: {
+        "@typescript-eslint/no-inferrable-types": "never",
         "@typescript-eslint/no-floating-promises": "error",
         "@typescript-eslint/consistent-type-assertions": "warn",
         "@typescript-eslint/consistent-type-definitions": "warn",
