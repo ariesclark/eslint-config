@@ -49,7 +49,7 @@ module.exports = {
         // Stylistic choices
         semi: ["warn", "always"],
         "object-curly-spacing": ["warn", "always"],
-        indent: ["warn", "tab"],
+        indent: ["warn", "tab", { SwitchCase: 1 }],
         // this rule is broken.
         // see: https://github.com/typescript-eslint/typescript-eslint/issues/1824
         "@typescript-eslint/indent": "off",
