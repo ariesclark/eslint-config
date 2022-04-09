@@ -50,6 +50,8 @@ module.exports = {
         semi: ["warn", "always"],
         "object-curly-spacing": ["warn", "always"],
         indent: ["warn", "tab", { SwitchCase: 1 }],
+        "no-trailing-spaces": ["warn"],
+
         // this rule is broken.
         // see: https://github.com/typescript-eslint/typescript-eslint/issues/1824
         "@typescript-eslint/indent": "off",
