@@ -1,5 +1,4 @@
-# @ariesclark/eslint-config 🚀🎨
-An opinionated (and clearly the best) eslint configuration.
+![GitHub image](https://raphtalia.ariesclark.com/github/ariesclark/eslint-config/banner?)
 
 ## Usage
 Applying the ruleset to your project is quick and easy. You install the package, then create an .eslintrc.js file and select an appropriate project profile.
