@@ -48,6 +48,7 @@ module.exports = {
         // Stylistic choices
         semi: ["warn", "always"],
         "object-curly-spacing": ["warn", "always"],
+        "space-infix-ops": ["warn"],
         indent: ["warn", "tab", { SwitchCase: 1 }],
         "no-trailing-spaces": ["warn"],
 
