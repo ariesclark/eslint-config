@@ -40,7 +40,6 @@ module.exports = {
 
         "no-sparse-arrays": "error",
         "no-eval": "error",
-        "no-void": "error",
         "no-with": "error",
 
         "no-throw-literal": "error",
