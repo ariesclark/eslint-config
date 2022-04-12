@@ -66,7 +66,9 @@ module.exports = {
             ignorePattern: "^.*className|d=\".+\""
         }],
 
-        "@typescript-eslint/array-type": ["warn", "generic"],
+        "@typescript-eslint/array-type": ["warn", {
+            default: "generic"
+        }],
 
         // long files should be separated into multiple files.
         "max-lines": ["warn", { max: 1000 }],
