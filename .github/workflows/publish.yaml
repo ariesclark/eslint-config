@@ -25,7 +25,7 @@ jobs:
       - name: login to npm
         run: |
           echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_ACCESS_TOKEN }}" > ~/.npmrc
-          git config --global user.name "ariesclark"
+          git config --global user.name "Runes[bot]"
           npm whoami
       - name: install dependencies
         run: pnpm i

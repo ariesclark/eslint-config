@@ -1,8 +1,8 @@
 {
-  "name": "@ariesclark/eslint-config",
+  "name": "@runes-security/eslint-config",
   "private": false,
-  "version": "1.2.0",
-  "description": "🚀🎨 An opinionated (and clearly the best) eslint configuration",
+  "version": "0.1.0",
+  "description": "A centralized style configuration for TypeScript based projects 🎨",
   "keywords": [
     "eslint",
     "eslint-config",
