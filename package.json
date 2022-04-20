@@ -1,7 +1,7 @@
 {
   "name": "@runes-security/eslint-config",
   "private": false,
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A centralized style configuration for TypeScript based projects 🎨",
   "keywords": [
     "eslint",
