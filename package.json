@@ -15,12 +15,17 @@
   "author": "ariesclark",
   "license": "MIT",
   "dependencies": {
-    "@rushstack/eslint-patch": "^1.1.1",
-    "@typescript-eslint/eslint-plugin": "^5.17.0",
-    "@typescript-eslint/parser": "^5.17.0",
-    "eslint": "^8.12.0",
-    "eslint-plugin-import": "^2.25.4",
+    "@rushstack/eslint-patch": "^1.1.3",
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/parser": "^5.20.0",
+    "eslint": "^8.14.0",
+    "eslint-import-resolver-typescript": "^2.7.1",
+    "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.4.0",
+    "eslint-plugin-sort-keys": "^2.3.5",
+    "eslint-plugin-tailwindcss": "^3.5.0",
     "eslint-plugin-unicorn": "^42.0.0",
     "typescript": "^4.6.3"
   }
