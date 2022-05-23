@@ -14,14 +14,10 @@ Create an .eslintrc.js config file that provides the Node.js ``__dirname`` conte
 
 ##### .eslintrc.js
 ```js
-// This is a workaround for https://github.com/eslint/eslint/issues/3458
-require("@ariesclark/eslint-config/modern-module-resolution");
+require("@ariesclark/eslint-config/eslint-patch");
 
 module.exports = {
     root: true,
     extends: ["@ariesclark/eslint-config"],
-    parserOptions: {
-        tsconfigRootDir: __dirname
-    }
 };
 ```

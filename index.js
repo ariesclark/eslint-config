@@ -1,1 +1,1 @@
-module.exports = require("./lib/profiles/base/index.js")
+module.exports = require("./dist/index.js");
