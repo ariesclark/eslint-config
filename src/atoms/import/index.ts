@@ -9,6 +9,7 @@ export = declare({
 			rules: {
 				"import/prefer-default-export": "off",
 				"import/no-anonymous-default-export": "off",
+				"import/no-named-as-default": "off",
 				"import/no-unresolved": "off",
 				"import/order": [
 					"warn",
