@@ -2,7 +2,7 @@ import path from "path";
 import { readFileSync } from "fs";
 
 export function getProjectRoot(): string {
-	return process.cwd();
+	return process.env["ESLINT_PROJECT_ROOT"] || process.cwd();
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
