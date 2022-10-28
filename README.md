@@ -17,7 +17,12 @@ Create an .eslintrc.js config file that provides the Node.js ``__dirname`` conte
 require("@ariesclark/eslint-config/eslint-patch");
 
 module.exports = {
-    root: true,
-    extends: ["@ariesclark/eslint-config"],
+  root: true,
+  extends: ["@ariesclark/eslint-config"],
+  parserOptions: {
+  project: "tsconfig.json",
+    tsconfigRootDir: __dirname,
+    sourceType: "module"
+  },
 };
 ```

@@ -12,7 +12,6 @@ export = declare({
 	plugins: ["sort-keys", "promise"],
 	rules: {
 		yoda: ["warn"],
-		"no-mixed-operators": ["error"],
 		"no-sparse-arrays": ["error"],
 		"no-eval": ["error"],
 		"no-with": ["error"],
