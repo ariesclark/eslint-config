@@ -15,14 +15,14 @@ Create an .eslintrc.js config file that provides the Node.js ``__dirname`` conte
 ##### .eslintrc.js
 ```js
 require("@ariesclark/eslint-config/eslint-patch");
+process.env["ESLINT_PROJECT_ROOT"] = __dirname;
 
 module.exports = {
   root: true,
-  extends: ["@ariesclark/eslint-config"],
-  parserOptions: {
-  project: "tsconfig.json",
-    tsconfigRootDir: __dirname,
-    sourceType: "module"
-  },
+  extends: [
+    "@ariesclark/eslint-config",
+    "@ariesclark/eslint-config/atoms/react",
+    "@ariesclark/eslint-config/atoms/tailwindcss",
+  ]
 };
 ```

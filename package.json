@@ -1,7 +1,7 @@
 {
   "name": "@ariesclark/eslint-config",
   "private": false,
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "A personal eslint configuration",
   "keywords": [
     "eslint",
@@ -14,6 +14,11 @@
     "eslint-patch.js",
     "index.js"
   ],
+  "exports": {
+    ".": "./dist/index.js",
+    "./eslint-patch": "./dist/eslint-patch.js",
+    "./atoms/*": "./dist/atoms/*/index.js"
+  },
   "scripts": {
     "build": "rm dist/* -rf && tsc"
   },
