@@ -16,6 +16,7 @@ export = declare({
 				}
 			},
 			rules: {
+				"react/display-name": "off",
 				"react/no-unstable-nested-components": ["warn"],
 				"react/self-closing-comp": ["warn"],
 				"react/hook-use-state": ["warn"],

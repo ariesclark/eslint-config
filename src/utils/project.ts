@@ -5,7 +5,6 @@ export function getProjectRoot(): string {
 	return process.env["ESLINT_PROJECT_ROOT"] || process.cwd();
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function getPackage(): any {
+export function getPackage(): unknown {
 	return JSON.parse(readFileSync(path.resolve(getProjectRoot(), "package.json"), "utf-8"));
 }

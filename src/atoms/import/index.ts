@@ -11,6 +11,9 @@ export = declare({
 				"import/no-anonymous-default-export": "off",
 				"import/no-named-as-default": "off",
 				"import/no-unresolved": "off",
+				"import/no-self-import": "warn",
+				"import/no-empty-named-blocks": "warn",
+				"import/no-useless-path-segments": "warn",
 				"import/order": [
 					"warn",
 					{

@@ -37,7 +37,7 @@ export = declare({
 				],
 
 				/**
-				 * This rule is disabled until it can be automatically fixed.
+				 * Feature blocked
 				 * @see https://github.com/typescript-eslint/typescript-eslint/issues/2296
 				 */
 				"@typescript-eslint/member-ordering": [

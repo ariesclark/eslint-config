@@ -3,7 +3,7 @@ import { declare } from "../../utils/declare";
 export = declare({
 	overrides: [
 		{
-			files: ["**/*.{js,jsx,ts,tsx}"],
+			files: ["**/*"],
 			extends: ["plugin:prettier/recommended"],
 			rules: {
 				"prettier/prettier": [
@@ -13,7 +13,7 @@ export = declare({
 						singleQuote: false,
 						jsxSingleQuote: false,
 						trailingComma: "none",
-						endOfLine: "crlf",
+						endOfLine: "lf",
 						useTabs: true
 					},
 					{

@@ -1,6 +1,7 @@
 import { declare } from "./utils/declare";
 
 export = declare({
+	ignorePatterns: ["**/node_modules", "**/vendor", "**/dist"],
 	extends: [
 		"eslint:recommended",
 		"plugin:promise/recommended",
@@ -12,18 +13,18 @@ export = declare({
 	plugins: ["sort-keys", "promise"],
 	rules: {
 		yoda: ["warn"],
-		"no-sparse-arrays": ["error"],
-		"no-eval": ["error"],
-		"no-with": ["error"],
-		"no-throw-literal": ["error"],
+		"no-sparse-arrays": ["warn"],
+		"no-eval": ["warn"],
+		"no-with": ["warn"],
+		"no-throw-literal": ["warn"],
 		"no-void": "off",
 
-		"require-atomic-updates": ["error"],
-		"symbol-description": ["error"]
+		"require-atomic-updates": ["warn"],
+		"symbol-description": ["warn"]
 	},
 	overrides: [
 		{
-			files: "**/.eslintrc.js",
+			files: "**/{.eslintrc,*.config}.js",
 			extends: [require.resolve("./atoms/node/index.js")]
 		}
 	]
