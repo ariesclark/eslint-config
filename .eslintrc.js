@@ -1,3 +1,3 @@
 module.exports = {
-	extends: ["./", "./dist/atoms/node"]
+	extends: ["./dist", "./dist/atoms/node"]
 };

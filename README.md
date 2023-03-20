@@ -1,4 +1,4 @@
-![GitHub image](https://raphtalia.ariesclark.com/github/ariesclark/eslint-config/banner?)
+# ariesclark/eslint-config
 
 ## Usage
 Applying the ruleset to your project is quick and easy. You install the package, then create an .eslintrc.js file and select an appropriate project profile.
@@ -6,7 +6,7 @@ Applying the ruleset to your project is quick and easy. You install the package,
 #### 1. Install the package
 To install the package, do this:
 ```sh
-npm install -D eslint typescript @ariesclark/eslint-config
+pnpm install -D eslint typescript @ariesclark/eslint-config
 ```
 
 #### 2. Configure the linter
@@ -21,8 +21,8 @@ module.exports = {
   root: true,
   extends: [
     "@ariesclark/eslint-config",
-    "@ariesclark/eslint-config/atoms/react",
-    "@ariesclark/eslint-config/atoms/tailwindcss",
+    "@ariesclark/eslint-config/react",
+    "@ariesclark/eslint-config/tailwindcss",
   ]
 };
 ```
