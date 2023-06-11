@@ -18,20 +18,34 @@ export = declare({
 			rules: {
 				"react/display-name": "off",
 				"react/no-unstable-nested-components": ["warn"],
-				"react/self-closing-comp": ["warn"],
 				"react/hook-use-state": ["warn"],
-				"react/button-has-type": ["warn"],
-				"react/jsx-sort-props": [
-					"warn",
-					{
-						ignoreCase: true,
-						callbacksLast: true,
-						shorthandFirst: true,
-						multiline: "last"
-					}
-				]
+				"react/button-has-type": ["warn"]
 			},
 			overrides: [
+				{
+					files: ["**/*.{jsx,tsx}"],
+					rules: {
+						"react/self-closing-comp": ["warn"],
+						"react/jsx-sort-props": [
+							"warn",
+							{
+								ignoreCase: true,
+								callbacksLast: true,
+								shorthandFirst: true,
+								multiline: "last"
+							}
+						],
+						"unicorn/prevent-abbreviations": [
+							"error",
+							{
+								replacements: {
+									// React component convention.
+									props: false
+								}
+							}
+						]
+					}
+				},
 				{
 					files: ["**/*.jsx"],
 					rules: {

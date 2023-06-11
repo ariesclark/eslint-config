@@ -5,7 +5,10 @@ export = declare({
 	overrides: [
 		{
 			files: ["**/*.{ts,tsx}"],
-			extends: ["plugin:@typescript-eslint/recommended", "plugin:import/typescript"],
+			extends: [
+				"plugin:@typescript-eslint/recommended",
+				"plugin:import/typescript"
+			],
 			parser: "@typescript-eslint/parser",
 			parserOptions: {
 				ecmaVersion: 2021,
@@ -45,7 +48,13 @@ export = declare({
 					{
 						default: {
 							order: "alphabetically",
-							memberTypes: ["signature", "field", "constructor", ["get", "set"], "method"]
+							memberTypes: [
+								"signature",
+								"field",
+								"constructor",
+								["get", "set"],
+								"method"
+							]
 						}
 					}
 				],
@@ -62,7 +71,9 @@ export = declare({
 					{
 						default: "generic"
 					}
-				]
+				],
+
+				"@typescript-eslint/ban-ts-comment": "off"
 			}
 		}
 	]

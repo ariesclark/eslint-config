@@ -1,10 +1,13 @@
-import path from "path";
+import path from "node:path";
 
 import { declare } from "../../utils/declare";
 import { getProjectRoot } from "../../utils/project";
 
 const callees = ["classnames", "clsx", "ctl", "twMerge"];
-const config = path.relative(process.cwd(), path.resolve(getProjectRoot(), "tailwind.config.js"));
+const config = path.relative(
+	process.cwd(),
+	path.resolve(getProjectRoot(), "tailwind.config.js")
+);
 
 const options = {
 	callees,

@@ -9,7 +9,6 @@ export = declare({
 				"prettier/prettier": [
 					"warn",
 					{
-						printWidth: 100,
 						singleQuote: false,
 						jsxSingleQuote: false,
 						trailingComma: "none",
