@@ -1,7 +1,7 @@
 {
   "name": "@ariesclark/eslint-config",
   "private": false,
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "A personal eslint configuration",
   "keywords": [
     "eslint",
