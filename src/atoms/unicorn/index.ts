@@ -12,5 +12,13 @@ export = declare({
 		"unicorn/no-null": "off",
 		"unicorn/no-await-expression-member": "off",
 		"unicorn/consistent-destructuring": "off"
-	}
+	},
+	overrides: [
+		{
+			files: "**/*.d.ts",
+			rules: {
+				"unicorn/prevent-abbreviations": "off"
+			}
+		}
+	]
 });
