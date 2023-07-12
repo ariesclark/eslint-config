@@ -10,11 +10,6 @@ export = declare({
 				"plugin:react-hooks/recommended"
 			],
 			plugins: ["react", "react-hooks"],
-			settings: {
-				react: {
-					version: "detect"
-				}
-			},
 			rules: {
 				"react/display-name": "off",
 				"react/no-unstable-nested-components": ["warn"],
