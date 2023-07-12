@@ -3,7 +3,16 @@ import path from "node:path";
 import { declare } from "../../utils/declare";
 import { getProjectRoot } from "../../utils/project";
 
-const callees = ["classnames", "clsx", "ctl", "twMerge"];
+/**
+ * Functions that are used to merge Tailwind classes, e.g. `twMerge` from
+ * https://npm.im/tailwind-merge or `cva` from https://npm.im/class-variance-authority,
+ *
+ * These need to be added to the `callees` array so that the plugin can
+ * detect when they are being used, by default, the plugin will only
+ * read classes within the `className` property.
+ */
+const callees = ["twMerge", "cva"];
+
 const config = path.relative(
 	process.cwd(),
 	path.resolve(getProjectRoot(), "tailwind.config.js")
