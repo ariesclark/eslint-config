@@ -23,6 +23,7 @@ export = declare({
 			},
 			plugins: ["@typescript-eslint"],
 			rules: {
+				"@typescript-eslint/no-unused-vars": ["warn"],
 				"@typescript-eslint/no-empty-interface": ["warn"],
 				"@typescript-eslint/no-inferrable-types": "off",
 				"@typescript-eslint/no-floating-promises": ["warn"],
@@ -73,6 +74,12 @@ export = declare({
 					}
 				],
 
+				/**
+				 * Sometimes it's easier to just opt-out of the type system for a moment,
+				 * instead of trying to make it work and waste time.
+				 * 
+				 * We can always come back and fix it later.
+				 */
 				"@typescript-eslint/ban-ts-comment": "off"
 			}
 		}
