@@ -11,7 +11,8 @@ export = declare({
 		],
 		"unicorn/no-null": "off",
 		"unicorn/no-await-expression-member": "off",
-		"unicorn/consistent-destructuring": "off"
+		"unicorn/consistent-destructuring": "off",
+		"unicorn/no-array-reduce": "off",
 	},
 	overrides: [
 		{

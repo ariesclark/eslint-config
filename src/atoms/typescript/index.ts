@@ -23,7 +23,11 @@ export = declare({
 			},
 			plugins: ["@typescript-eslint"],
 			rules: {
-				"@typescript-eslint/no-unused-vars": ["warn"],
+				"@typescript-eslint/no-unused-vars": ["warn", {
+					"argsIgnorePattern": "^_",
+					"varsIgnorePattern": "^_"
+				}],
+				
 				"@typescript-eslint/no-empty-interface": ["warn"],
 				"@typescript-eslint/no-inferrable-types": "off",
 				"@typescript-eslint/no-floating-promises": ["warn"],

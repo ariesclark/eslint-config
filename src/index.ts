@@ -28,7 +28,7 @@ export = declare({
 	},
 	overrides: [
 		{
-			files: "**/{.eslintrc,*.config}.js",
+			files: "**/{.eslintrc,*.config}.{js,cjs,mjs}",
 			extends: [require.resolve("./atoms/node/index.js")]
 		}
 	]
