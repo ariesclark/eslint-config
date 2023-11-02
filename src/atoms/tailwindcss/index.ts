@@ -29,6 +29,16 @@ export = declare({
 			files: ["**/*.{js,jsx,ts,tsx}"],
 			plugins: ["tailwindcss"],
 			extends: ["plugin:tailwindcss/recommended"],
+			settings: {
+				/**
+				 * Performance issue with the plugin, somewhat mitigated setting cssFiles to an empty array.
+				 * @see https://github.com/francoismassart/eslint-plugin-tailwindcss/issues/276
+				 * @see https://github.com/francoismassart/eslint-plugin-tailwindcss/issues/174
+				 */
+				tailwindcss: {
+					cssFiles: []
+				}
+			},
 			rules: {
 				"tailwindcss/no-custom-classname": ["warn", options],
 				"tailwindcss/no-contradicting-classname": ["warn", options],
