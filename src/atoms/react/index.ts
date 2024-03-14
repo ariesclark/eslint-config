@@ -11,7 +11,7 @@ export = declare({
 			],
 			plugins: ["react", "react-hooks"],
 			rules: {
-				"react/display-name": "off",
+				// "react/display-name": "off",
 				"react/no-unstable-nested-components": ["warn"],
 				"react/hook-use-state": ["warn"],
 				"react/button-has-type": ["warn"]
