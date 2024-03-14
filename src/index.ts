@@ -20,7 +20,7 @@ export = declare({
 		"no-sparse-arrays": ["warn"],
 		"no-eval": ["warn"],
 		"no-with": ["warn"],
-		"no-throw-literal": ["warn"],
+		"no-throw-literal": ["error"],
 		"no-void": "off",
 
 		"require-atomic-updates": ["warn"],

@@ -6,7 +6,7 @@ export = declare({
 		{
 			files: ["**/*.{ts,tsx}"],
 			extends: [
-				"plugin:@typescript-eslint/recommended",
+				"plugin:@typescript-eslint/strict-type-checked",
 				"plugin:import/typescript"
 			],
 			parser: "@typescript-eslint/parser",
@@ -33,6 +33,13 @@ export = declare({
 				"@typescript-eslint/no-floating-promises": ["warn"],
 				"@typescript-eslint/consistent-type-assertions": ["warn"],
 				"@typescript-eslint/consistent-type-definitions": ["warn"],
+				"@typescript-eslint/no-array-delete": ["warn"],
+
+				"@typescript-eslint/no-import-type-side-effects": ["warn"],
+				"@typescript-eslint/consistent-type-imports": ["warn", {
+					prefer: "type-imports",
+					fixStyle: "inline-type-imports"
+				}],
 
 				"lines-between-class-members": "off",
 				"@typescript-eslint/lines-between-class-members": [
