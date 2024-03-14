@@ -22,6 +22,7 @@ module.exports = {
   extends: [
     "@ariesclark/eslint-config",
     "@ariesclark/eslint-config/react",
+    // "@ariesclark/eslint-config/next" // Uncomment if using Next.js, includes React automatically.
     "@ariesclark/eslint-config/tailwindcss",
   ]
 };
