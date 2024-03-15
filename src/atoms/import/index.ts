@@ -17,6 +17,7 @@ export = declare({
 				"import/no-self-import": "warn",
 				"import/no-empty-named-blocks": "warn",
 				"import/no-useless-path-segments": "warn",
+				"import/no-named-as-default-member": "off",
 				"import/order": [
 					"warn",
 					{

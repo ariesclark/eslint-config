@@ -7,6 +7,7 @@ export = declare({
 			files: ["**/*.{ts,tsx}"],
 			extends: [
 				"plugin:@typescript-eslint/strict-type-checked",
+				"plugin:@typescript-eslint/disable-type-checked",
 				"plugin:import/typescript"
 			],
 			parser: "@typescript-eslint/parser",
@@ -23,11 +24,14 @@ export = declare({
 			},
 			plugins: ["@typescript-eslint"],
 			rules: {
-				"@typescript-eslint/no-unused-vars": ["warn", {
-					"argsIgnorePattern": "^_",
-					"varsIgnorePattern": "^_"
-				}],
-				
+				"@typescript-eslint/no-unused-vars": [
+					"warn",
+					{
+						argsIgnorePattern: "^_",
+						varsIgnorePattern: "^_"
+					}
+				],
+
 				"@typescript-eslint/no-empty-interface": ["warn"],
 				"@typescript-eslint/no-inferrable-types": "off",
 				"@typescript-eslint/no-floating-promises": ["warn"],
@@ -36,10 +40,13 @@ export = declare({
 				"@typescript-eslint/no-array-delete": ["warn"],
 
 				"@typescript-eslint/no-import-type-side-effects": ["warn"],
-				"@typescript-eslint/consistent-type-imports": ["warn", {
-					prefer: "type-imports",
-					fixStyle: "inline-type-imports"
-				}],
+				"@typescript-eslint/consistent-type-imports": [
+					"warn",
+					{
+						prefer: "type-imports",
+						fixStyle: "inline-type-imports"
+					}
+				],
 
 				"lines-between-class-members": "off",
 				"@typescript-eslint/lines-between-class-members": [
@@ -88,7 +95,7 @@ export = declare({
 				/**
 				 * Sometimes it's easier to just opt-out of the type system for a moment,
 				 * instead of trying to make it work and waste time.
-				 * 
+				 *
 				 * We can always come back and fix it later.
 				 */
 				"@typescript-eslint/ban-ts-comment": "off"

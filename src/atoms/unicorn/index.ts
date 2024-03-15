@@ -13,6 +13,7 @@ export = declare({
 		"unicorn/no-await-expression-member": "off",
 		"unicorn/consistent-destructuring": "off",
 		"unicorn/no-array-reduce": "off",
+		"unicorn/no-abusive-eslint-disable": "off"
 	},
 	overrides: [
 		{

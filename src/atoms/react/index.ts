@@ -12,15 +12,15 @@ export = declare({
 			plugins: ["react", "react-hooks"],
 			rules: {
 				// "react/display-name": "off",
-				"react/no-unstable-nested-components": ["warn"],
-				"react/hook-use-state": ["warn"],
-				"react/button-has-type": ["warn"]
+				"react/no-unstable-nested-components": "warn",
+				"react/hook-use-state": "warn",
+				"react/button-has-type": "warn"
 			},
 			overrides: [
 				{
 					files: ["**/*.{jsx,tsx}"],
 					rules: {
-						"react/self-closing-comp": ["warn"],
+						"react/self-closing-comp": "warn",
 						"react/jsx-sort-props": [
 							"warn",
 							{
@@ -30,6 +30,7 @@ export = declare({
 								multiline: "last"
 							}
 						],
+						"react/no-unknown-property": "off",
 						"unicorn/prevent-abbreviations": [
 							"error",
 							{
@@ -44,7 +45,7 @@ export = declare({
 				{
 					files: ["**/*.jsx"],
 					rules: {
-						"react/prop-types": ["warn"]
+						"react/prop-types": "warn"
 					}
 				},
 				{
