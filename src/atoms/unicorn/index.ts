@@ -3,12 +3,9 @@ import { declare } from "../../utils/declare";
 export = declare({
 	extends: ["plugin:unicorn/recommended"],
 	rules: {
-		"unicorn/catch-error-name": [
-			"warn",
-			{
-				name: "reason"
-			}
-		],
+		"unicorn/catch-error-name": ["warn", { name: "reason" }],
+		"unicorn/no-useless-undefined": ["warn", { checkArguments: false }],
+		"unicorn/prefer-number-properties": ["warn", { checkInfinity: false }],
 		"unicorn/no-null": "off",
 		"unicorn/no-await-expression-member": "off",
 		"unicorn/consistent-destructuring": "off",
