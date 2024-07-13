@@ -1,35 +1,46 @@
-import { declare } from "./utils/declare";
+import { config } from "typescript-eslint";
+import js from "@eslint/js";
 
-export = declare({
-	ignorePatterns: ["**/node_modules", "**/vendor", "**/dist"],
-	reportUnusedDisableDirectives: true,
-	extends: [
-		"eslint:recommended",
-		"plugin:promise/recommended",
+import node from "./configs/node.js";
+import _import from "./configs/import.js";
+import typescript from "./configs/typescript.js";
+import promise from "./configs/promise.js";
+import sortKeys from "./configs/sort-keys.js";
+import prettier from "./configs/prettier.js";
+import unicorn from "./configs/unicorn.js";
 
-		...[
-			"./atoms/typescript/index.js",
-			"./atoms/import/index.js",
-			"./atoms/unicorn/index.js",
-			"./atoms/prettier/index.js"
-		].map((value) => require.resolve(value))
-	],
-	plugins: ["sort-keys", "promise"],
-	rules: {
-		yoda: ["warn"],
-		"no-sparse-arrays": ["warn"],
-		"no-eval": ["warn"],
-		"no-with": ["warn"],
-		"no-throw-literal": ["error"],
-		"no-void": "off",
+import type { Linter } from "eslint";
 
-		"require-atomic-updates": ["warn"],
-		"symbol-description": ["warn"]
-	},
-	overrides: [
-		{
-			files: "**/{.eslintrc,*.config}.{js,cjs,mjs}",
-			extends: [require.resolve("./atoms/node/index.js")]
+export const configs = {
+	recommended: config({
+		extends: [
+			js.configs.recommended,
+			...promise,
+			...sortKeys,
+			...typescript,
+			..._import,
+			...unicorn,
+			...prettier,
+			...config({
+				extends: [...node],
+				files: ["**/.eslintrc.{js,cjs,mjs}", "**/*.config.{js,cjs,mjs}"]
+			})
+		],
+		ignores: ["**/node_modules/**", "**/dist/**", "**/__generated/**"],
+		linterOptions: {
+			reportUnusedDisableDirectives: true
+		},
+		rules: {
+			"no-eval": ["warn"],
+			"no-sparse-arrays": ["warn"],
+			"no-throw-literal": ["error"],
+			"no-void": "off",
+			"no-with": ["warn"],
+			"require-atomic-updates": ["warn"],
+			"symbol-description": ["warn"],
+			yoda: ["warn"]
 		}
-	]
-});
+	}) as Array<Linter.FlatConfig>
+};
+
+export { config };
