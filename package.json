@@ -2,7 +2,7 @@
   "name": "@ariesclark/eslint-config",
   "private": false,
   "type": "module",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "An opinionated ESLint Configuration",
   "keywords": [
     "eslint",
