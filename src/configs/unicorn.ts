@@ -1,9 +1,9 @@
 import globals from "globals";
-import { config } from "typescript-eslint";
 // @ts-expect-error: types not available.
-import unicorn from "eslint-plugin-unicorn";
+import PluginUnicorn from "eslint-plugin-unicorn";
+import { config } from "typescript-eslint";
 
-import type { Linter } from "eslint";
+import type { TSESLint } from "@typescript-eslint/utils";
 
 export default config(
 	{
@@ -12,7 +12,7 @@ export default config(
 		},
 		name: "@ariesclark/eslint-config/unicorn",
 		plugins: {
-			unicorn
+			unicorn: PluginUnicorn
 		},
 		rules: {
 			"unicorn/catch-error-name": ["warn", { name: "reason" }],
@@ -31,4 +31,4 @@ export default config(
 			"unicorn/prevent-abbreviations": "off"
 		}
 	}
-) as Array<Linter.FlatConfig>;
+) as TSESLint.FlatConfig.ConfigArray;

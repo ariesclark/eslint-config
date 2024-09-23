@@ -1,7 +1,7 @@
 import globals from "globals";
 import { config } from "typescript-eslint";
 
-import type { Linter } from "eslint";
+import type { TSESLint } from "@typescript-eslint/utils";
 
 export default config({
 	languageOptions: {
@@ -14,4 +14,4 @@ export default config({
 	rules: {
 		"unicorn/prefer-module": "off"
 	}
-}) as Array<Linter.FlatConfig>;
+}) as TSESLint.FlatConfig.ConfigArray;

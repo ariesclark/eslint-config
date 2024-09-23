@@ -1,7 +1,7 @@
 import { config } from "typescript-eslint";
-import prettier from "eslint-plugin-prettier/recommended";
+import PluginPrettier from "eslint-plugin-prettier/recommended";
 
-import type { Linter } from "eslint";
+import type { TSESLint } from "@typescript-eslint/utils";
 
 const options = {
 	endOfLine: "lf",
@@ -12,7 +12,8 @@ const options = {
 };
 
 export default config({
-	extends: [prettier],
+	// @ts-expect-error: mismatch types.
+	extends: [PluginPrettier],
 	name: "@ariesclark/eslint-config/prettier",
 	rules: {
 		"prettier/prettier": [
@@ -23,4 +24,4 @@ export default config({
 			}
 		]
 	}
-}) as Array<Linter.FlatConfig>;
+}) as TSESLint.FlatConfig.ConfigArray;

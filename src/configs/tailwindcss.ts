@@ -1,13 +1,15 @@
-import { config, type Config } from "typescript-eslint";
 // @ts-expect-error: types not available.
-import tailwindcss from "eslint-plugin-tailwindcss";
+import PluginTailwindCSS from "eslint-plugin-tailwindcss";
+import { config } from "typescript-eslint";
+
+import type { TSESLint } from "@typescript-eslint/utils";
 
 const callees = ["classnames", "clsx", "ctl", "cva", "twMerge", "tv"];
 
 export default config({
 	files: ["**/*.{js,jsx,ts,tsx}"],
 	name: "@ariesclark/eslint-config/tailwindcss",
-	plugins: { tailwindcss },
+	plugins: { tailwindcss: PluginTailwindCSS },
 	rules: {
 		"tailwindcss/classnames-order": "warn",
 		"tailwindcss/enforces-negative-arbitrary-values": "warn",
@@ -26,4 +28,4 @@ export default config({
 			skipClassAttribute: false
 		}
 	}
-}) as Config;
+}) as TSESLint.FlatConfig.ConfigArray;

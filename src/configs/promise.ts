@@ -1,11 +1,13 @@
 import { config } from "typescript-eslint";
 // @ts-expect-error: types not available.
-import promise from "eslint-plugin-promise";
+import PluginPromise from "eslint-plugin-promise";
 
-import type { Linter } from "eslint";
+import type { TSESLint } from "@typescript-eslint/utils";
 
-export default config({
-	extends: [promise.configs["flat/recommended"]],
+const promise: Array<TSESLint.FlatConfig.Config> = config({
+	extends: [PluginPromise.configs["flat/recommended"]],
 	name: "@ariesclark/eslint-config/promise",
-	plugins: { promise }
-}) as Array<Linter.FlatConfig>;
+	plugins: { promise: PluginPromise }
+});
+
+export default promise;

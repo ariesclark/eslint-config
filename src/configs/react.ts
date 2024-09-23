@@ -1,56 +1,47 @@
-import { config } from "typescript-eslint";
 // @ts-expect-error: types not available.
-import react from "eslint-plugin-react";
+import PluginReact from "eslint-plugin-react";
+// @ts-expect-error: types not available.
+import PluginReactHooks from "eslint-plugin-react-hooks";
+// @ts-expect-error: types not available.
+import ImportPlugin from "eslint-plugin-import";
+import { config } from "typescript-eslint";
 
-import type { Linter } from "eslint";
+import type { TSESLint } from "@typescript-eslint/utils";
 
 export default config({
+	extends: [
+		PluginReact.configs.flat.recommended,
+		PluginReact.configs.flat["jsx-runtime"],
+		// PluginReactHooks.configs.recommended.rules,
+		ImportPlugin.flatConfigs.react
+	],
 	files: ["**/*.{js,jsx,ts,tsx}"],
 	name: "@ariesclark/eslint-config/react",
-	plugins: { react },
-	// extends: [
-	// 	react.configs.recommended,
-	// 	config({
-	// 		files: ["**/*.{jsx,tsx}"],
-	// 		extends: [
-	// 			react.configs["jsx-runtime"]
-	// 		],
-	// 		rules: {
-	// 			"react/self-closing-comp": "warn",
-	// 			"react/jsx-sort-props": [
-	// 				"warn",
-	// 				{
-	// 					ignoreCase: true,
-	// 					callbacksLast: true,
-	// 					shorthandFirst: true,
-	// 					multiline: "last"
-	// 				}
-	// 			],
-	// 			"react/no-unknown-property": "off",
-	// 			"unicorn/prevent-abbreviations": [
-	// 				"error",
-	// 				{
-	// 					replacements: {
-	// 						// React component convention.
-	// 						props: false
-	// 					}
-	// 				}
-	// 			]
-	// 		}
-	// 	}),
-	// ],
-	// extends: [
-	// 	"plugin:react/recommended",
-	// 	"plugin:react/jsx-runtime",
-	// 	"plugin:react-hooks/recommended"
-	// ],
-	// plugins: ["react", "react-hooks"],
+	plugins: { react: PluginReact, "react-hooks": PluginReactHooks },
 	rules: {
 		"react/button-has-type": "warn",
-
 		"react/hook-use-state": "warn",
-		// "react/display-name": "off",
+		"react/jsx-sort-props": [
+			"warn",
+			{
+				callbacksLast: true,
+				ignoreCase: true,
+				multiline: "last",
+				shorthandFirst: true
+			}
+		],
+		"react/no-unknown-property": "off",
 		"react/no-unstable-nested-components": "warn",
-		"react/prop-types": "off"
+		"react/prop-types": "off",
+		"react/self-closing-comp": "warn",
+		"unicorn/prevent-abbreviations": [
+			"error",
+			{
+				replacements: {
+					// React component convention.
+					props: false
+				}
+			}
+		]
 	}
-}) as Array<Linter.FlatConfig>;
+}) as TSESLint.FlatConfig.ConfigArray;

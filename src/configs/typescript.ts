@@ -1,9 +1,13 @@
-import { config, configs } from "typescript-eslint";
+import PluginTypeScript from "typescript-eslint";
+import { config } from "typescript-eslint";
 
-import type { Linter } from "eslint";
+import type { TSESLint } from "@typescript-eslint/utils";
 
 export default config({
-	extends: [...configs.strictTypeChecked, configs.disableTypeChecked],
+	extends: [
+		...PluginTypeScript.configs.strictTypeChecked,
+		PluginTypeScript.configs.disableTypeChecked
+	],
 	files: ["**/*.{ts,tsx}"],
 	languageOptions: {
 		parserOptions: {
@@ -56,4 +60,4 @@ export default config({
 			typescript: {}
 		}
 	}
-}) as Array<Linter.FlatConfig>;
+}) as TSESLint.FlatConfig.ConfigArray;
