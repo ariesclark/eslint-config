@@ -24,7 +24,9 @@ export async function next({ webVitals = true }: NextOptions = {}): Promise<Arra
 			name: "ariesclark/next/rules",
 			rules: {
 				...pluginNext.configs.recommended.rules,
-				...webVitals ? pluginNext.configs["core-web-vitals"].rules : []
+				...webVitals ? pluginNext.configs["core-web-vitals"].rules : [],
+				"@next/next/no-duplicate-head": "off",
+				"@next/next/no-page-custom-font": "off"
 			}
 		}
 	];
