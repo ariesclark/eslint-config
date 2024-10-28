@@ -1,7 +1,7 @@
 {
 	"name": "@ariesclark/eslint-config",
 	"type": "module",
-	"version": "2.1.0",
+	"version": "2.1.1-canary.0",
 	"private": false,
 	"description": "An opinionated ESLint Configuration",
 	"author": "ariesclark",
