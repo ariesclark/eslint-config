@@ -1,64 +1,60 @@
 {
-  "name": "@ariesclark/eslint-config",
-  "private": false,
-  "type": "module",
-  "version": "2.1.0",
-  "description": "An opinionated ESLint Configuration",
-  "keywords": [
-    "eslint",
-    "eslint-config",
-    "typescript"
-  ],
-  "main": "index.js",
-  "files": [
-    "dist",
-    "eslint-patch.js",
-    "index.js"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ariesclark/eslint-config.git"
-  },
-  "types": "dist/index.d.ts",
-  "exports": {
-    ".": "./dist/index.js",
-    "./*": "./dist/configs/*.js"
-  },
-  "scripts": {
-    "build": "rm dist/* -rf && tsc"
-  },
-  "author": "ariesclark",
-  "license": "MIT",
-  "dependencies": {
-    "@eslint/compat": "^1.1.1",
-    "@eslint/eslintrc": "^3.1.0",
-    "@eslint/js": "^9.11.0",
-    "@next/eslint-plugin-next": "^14.2.13",
-    "eslint": "^9.11.0",
-    "eslint-config-next": "^14.2.13",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-import": "^2.30.0",
-    "eslint-plugin-import-x": "^4.3.0",
-    "eslint-plugin-prettier": "^5.2.1",
-    "eslint-plugin-promise": "^7.1.0",
-    "eslint-plugin-react": "^7.36.1",
-    "eslint-plugin-react-hooks": "5.1.0-rc-e4953922-20240919",
-    "eslint-plugin-sort-keys-fix": "^1.1.2",
-    "eslint-plugin-tailwindcss": "^3.17.4",
-    "eslint-plugin-unicorn": "^54.0.0",
-    "globals": "^15.9.0",
-    "prettier": "^3.3.3",
-    "typescript-eslint": "8.0.0-alpha.41"
-  },
-  "devDependencies": {
-    "@types/eslint": "^9.6.1",
-    "@types/eslint__eslintrc": "^2.1.2",
-    "@types/eslint__js": "^8.42.3",
-    "@types/node": "^20.16.5",
-    "tailwindcss": "^3.4.12",
-    "typescript": "^5.6.2"
-  },
-  "peerDependencies": {
-    "eslint": "^9"
-  }
+	"name": "@ariesclark/eslint-config",
+	"type": "module",
+	"version": "2.1.0",
+	"private": false,
+	"description": "An opinionated ESLint Configuration",
+	"author": "ariesclark",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ariesclark/eslint-config.git"
+	},
+	"keywords": [
+		"eslint",
+		"eslint-config",
+		"typescript"
+	],
+	"exports": {
+		".": "./dist/index.js",
+		"./*": "./dist/configs/*.js"
+	},
+	"main": "index.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"dist",
+		"eslint-patch.js",
+		"index.js"
+	],
+	"scripts": {
+		"build": "rm dist/* -rf && tsc",
+		"canary": "pnpm version prerelease --preid=canary && pnpm publish --tag canary --no-git-checks",
+		"inspect": "eslint-config-inspector --config eslint.config.ts"
+	},
+	"peerDependencies": {
+		"@next/eslint-plugin-next": "^15",
+		"eslint": "^9",
+		"eslint-plugin-tailwindcss": "^3"
+	},
+	"peerDependenciesMeta": {
+		"@next/eslint-plugin-next": {
+			"optional": true
+		},
+		"eslint-plugin-tailwindcss": {
+			"optional": true
+		}
+	},
+	"dependencies": {
+		"@antfu/eslint-config": "^3.8.0",
+		"eslint-flat-config-utils": "^0.4.0",
+		"local-pkg": "^0.5.0"
+	},
+	"devDependencies": {
+		"@eslint/config-inspector": "^0.5.5",
+		"@types/eslint": "^9.6.1",
+		"@types/eslint__eslintrc": "^2.1.2",
+		"@types/eslint__js": "^8.42.3",
+		"@types/node": "^22.8.1",
+		"typescript": "^5.6.3"
+	}
 }

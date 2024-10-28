@@ -16,7 +16,7 @@ Create an eslint.config.mjs config file, as shown below:
 
 ##### eslint.config.mjs (ESLint v9+)
 ```js
-import { configs, config } from "@ariesclark/eslint-config";
+import { config, configs } from "@ariesclark/eslint-config";
 import tailwindcss from "@ariesclark/eslint-config/tailwindcss";
 /* You can import any subset by like below: */
 // import react from "@ariesclark/eslint-config/react";
@@ -26,8 +26,8 @@ export default config({
 	extends: [
 		/***
 			The recommended configuration includes the following by default:
-		  Promise, TypeScript, Import, Unicorn and Prettier.
-		 */
+			Promise, TypeScript, Import, Unicorn and Prettier.
+		*/
 		...configs.recommended,
 		// You can selectively include any subsets.
 		// ...sortKeys, /* Previously enabled by default, now opt-in. */
@@ -38,5 +38,4 @@ export default config({
 		...nextjs /* includes: React subset. */
 	]
 });
-
 ```

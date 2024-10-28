@@ -1,6 +1,4 @@
-import { configs, config } from "./dist/index.js";
-import node from "./dist/configs/node.js";
+// eslint-disable-next-line antfu/no-import-dist
+import { configs } from "./dist/index.js";
 
-export default config({
-	extends: [...configs.recommended, ...node]
-});
+export default configs.recommended;
