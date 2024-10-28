@@ -28,7 +28,7 @@
 	],
 	"scripts": {
 		"build": "rm dist/* -rf && tsc",
-		"canary": "pnpm version prerelease --preid=canary && pnpm publish --tag canary --no-git-checks",
+		"canary": "pnpm build && pnpm version prerelease --preid=canary && pnpm publish --tag canary --no-git-checks",
 		"inspect": "eslint-config-inspector --config eslint.config.ts"
 	},
 	"peerDependencies": {
