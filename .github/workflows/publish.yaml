@@ -19,7 +19,7 @@ jobs:
 
       - uses: pnpm/action-setup@v2.0.1
         with:
-          version: 6.0.2
+          version: 9.12.3
           run_install: false
 
       - name: login to npm
@@ -28,7 +28,7 @@ jobs:
           git config --global user.name "ariesclark"
           npm whoami
       - name: install dependencies
-        run: pnpm i
+        run: pnpm i --shamefully-hoist
 
       - name: build package
         run: pnpm build
