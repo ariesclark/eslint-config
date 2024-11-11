@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@antfu/eslint-config':
         specifier: ^3.8.0
-        version: 3.8.0(@typescript-eslint/utils@8.12.2(eslint@9.13.0(jiti@2.4.0))(typescript@5.6.3))(@vue/compiler-sfc@3.5.12)(eslint-plugin-react-hooks@5.1.0-rc-e4953922-20240919(eslint@9.13.0(jiti@2.4.0)))(eslint@9.13.0(jiti@2.4.0))(typescript@5.6.3)
+        version: 3.8.0(@typescript-eslint/utils@8.12.2(eslint@9.13.0(jiti@2.4.0))(typescript@5.6.3))(@vue/compiler-sfc@3.5.12)(eslint@9.13.0(jiti@2.4.0))(typescript@5.6.3)
       '@next/eslint-plugin-next':
         specifier: ^15
         version: 15.0.1
@@ -47,7 +47,7 @@ importers:
         version: 8.42.3
       '@types/node':
         specifier: ^22.8.7
-        version: 22.8.7
+        version: 22.9.0
       eslint-typegen:
         specifier: ^0.3.2
         version: 0.3.2(eslint@9.13.0(jiti@2.4.0))
@@ -697,8 +697,8 @@ packages:
   '@types/ms@0.7.34':
     resolution: {integrity: sha512-nG96G3Wp6acyAgJqGasjODb+acrI7KltPiRxzHPXnP3NgI28bpQDRv53olbqGXbfcgF5aiiHmO3xpwEpS5Ld9g==}
 
-  '@types/node@22.8.7':
-    resolution: {integrity: sha512-LidcG+2UeYIWcMuMUpBKOnryBWG/rnmOHQR5apjn8myTQcx3rinFRn7DcIFhMnS0PPFSC6OafdIKEad0lj6U0Q==}
+  '@types/node@22.9.0':
+    resolution: {integrity: sha512-vuyHg81vvWA1Z1ELfvLko2c8f34gyA0zaic0+Rllc5lbCnbSyuvb2Oxpm6TAUAC/2xZN3QGqxBNggD1nNR2AfQ==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -1164,12 +1164,6 @@ packages:
         optional: true
       vue-eslint-parser:
         optional: true
-
-  eslint-plugin-react-hooks@5.1.0-rc-e4953922-20240919:
-    resolution: {integrity: sha512-W/CJVTs49Wn34P3RTMGb5jx7JW8ftUIUzNqYDsWqO/tz26DU3fXrou44jxAvu1HR5VH9DutXgxq7DCgDM2MBGQ==}
-    engines: {node: '>=10'}
-    peerDependencies:
-      eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0 || ^9.0.0
 
   eslint-plugin-regexp@2.6.0:
     resolution: {integrity: sha512-FCL851+kislsTEQEMioAlpDuK5+E5vs0hi1bF8cFlPlHcEjeRhuAzEsGikXRreE+0j4WhW2uO54MqTjXtYOi3A==}
@@ -2358,7 +2352,7 @@ snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
 
-  '@antfu/eslint-config@3.8.0(@typescript-eslint/utils@8.12.2(eslint@9.13.0(jiti@2.4.0))(typescript@5.6.3))(@vue/compiler-sfc@3.5.12)(eslint-plugin-react-hooks@5.1.0-rc-e4953922-20240919(eslint@9.13.0(jiti@2.4.0)))(eslint@9.13.0(jiti@2.4.0))(typescript@5.6.3)':
+  '@antfu/eslint-config@3.8.0(@typescript-eslint/utils@8.12.2(eslint@9.13.0(jiti@2.4.0))(typescript@5.6.3))(@vue/compiler-sfc@3.5.12)(eslint@9.13.0(jiti@2.4.0))(typescript@5.6.3)':
     dependencies:
       '@antfu/install-pkg': 0.4.1
       '@clack/prompts': 0.7.0
@@ -2396,8 +2390,6 @@ snapshots:
       vue-eslint-parser: 9.4.3(eslint@9.13.0(jiti@2.4.0))
       yaml-eslint-parser: 1.2.3
       yargs: 17.7.2
-    optionalDependencies:
-      eslint-plugin-react-hooks: 5.1.0-rc-e4953922-20240919(eslint@9.13.0(jiti@2.4.0))
     transitivePeerDependencies:
       - '@typescript-eslint/utils'
       - '@vue/compiler-sfc'
@@ -2852,7 +2844,7 @@ snapshots:
 
   '@types/ms@0.7.34': {}
 
-  '@types/node@22.8.7':
+  '@types/node@22.9.0':
     dependencies:
       undici-types: 6.19.8
 
@@ -3376,11 +3368,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
       - typescript
-
-  eslint-plugin-react-hooks@5.1.0-rc-e4953922-20240919(eslint@9.13.0(jiti@2.4.0)):
-    dependencies:
-      eslint: 9.13.0(jiti@2.4.0)
-    optional: true
 
   eslint-plugin-regexp@2.6.0(eslint@9.13.0(jiti@2.4.0)):
     dependencies:
