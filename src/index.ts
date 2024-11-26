@@ -93,7 +93,7 @@ export function configure(options: Options = {}, ...configs: Array<Parameters<ty
 								"event",
 							],
 							customGroups: {
-								event: "on*"
+								event: "^on.+"
 							},
 						}],
 						...(typeof stylisticOptions === "object" ? stylisticOptions.overrides : {}),
