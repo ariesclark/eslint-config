@@ -1,9 +1,12 @@
-import antfu, { type ConfigNames, getOverrides, type OptionsConfig, resolveSubOptions, type TypedFlatConfigItem } from "@antfu/eslint-config";
+import antfu, { getOverrides } from "@antfu/eslint-config";
+import type { ConfigNames, OptionsConfig, TypedFlatConfigItem } from "@antfu/eslint-config";
 import type { FlatConfigComposer, } from "eslint-flat-config-utils";
 import { isPackageExists } from "local-pkg";
 
-import { next, type NextOptions } from "./configs/next.js";
-import { tailwind, type TailwindOptions } from "./configs/tailwind.js";
+import { next } from "./configs/next.js";
+import type { NextOptions } from "./configs/next.js";
+import { tailwind } from "./configs/tailwind.js";
+import type { TailwindOptions } from "./configs/tailwind.js";
 import { typescript } from "./configs/typescript.js";
 
 export type Options = {
@@ -24,9 +27,15 @@ const typeOrder = [
 	"nullish",
 ];
 
+const identifierNames = [
+	"key",
+	"id",
+	"name",
+	"i18nKey",
+	"ref",
+];
+
 /**
- * This function
- *
  * @returns A flat ESLint configuration, export this in your `eslint.config.{js,mjs}` file.
  */
 export function configure(options: Options = {}, ...configs: Array<Parameters<typeof antfu>[1]>): Composer {
@@ -87,14 +96,27 @@ export function configure(options: Options = {}, ...configs: Array<Parameters<ty
 						"perfectionist/sort-jsx-props": ["error", {
 							ignoreCase: true,
 							groups: [
+								"identifier",
 								"shorthand",
+								"data",
 								"multiline",
 								"unknown",
 								"event",
 							],
-							customGroups: {
-								event: "^on.+"
-							},
+							customGroups: [
+								{
+									groupName: "identifier",
+									elementNamePattern: `^(${identifierNames.join("|")})$`
+								},
+								{
+									groupName: "data",
+									elementNamePattern: "^(aria|data)-.+"
+								},
+								{
+									groupName: "event",
+									elementNamePattern: "^on.+"
+								}
+							]
 						}],
 						...(typeof stylisticOptions === "object" ? stylisticOptions.overrides : {}),
 					},
